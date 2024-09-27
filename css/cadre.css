@@ -1,0 +1,10 @@
+#fullScreen1 { 
+    background-color: rgb(33, 203, 219); 
+    width: 100%; 
+    height: 100%; 
+} 
+
+#fullScreen1:fullscreen {
+max-height: 100%;  
+background-color:#CCC; 
+}

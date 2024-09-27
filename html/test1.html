@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple d'iframe</title>
+
+</head>
+<body>
+    <h1>Afficher le contenu d'un iframe en cliquant sur un lien</h1>
+ 
+    
+    <a href="#" onclick="loadIframe('https://gestion.100000entrepreneurs.com/enseignant/auth/connexion')">Cliquez ici pour charger l'iframe</a>
+    <a href="#" onclick="loadIframe('https://fr.w3docs.com/apprendre-html/html-tag-iframe.html#:~:text=align')">Cliquez ici pour charger l'iframe</a>
+<br>
+    <iframe id="myIframe1" width="34%" height="800"> </iframe>    
+    <iframe id="myIframe" src="" width="65%" height="800"> </iframe>
+
+
+    <script>
+        function loadIframe(url) {
+            document.getElementById('cadre.html#myIframe').src = url;
+        }
+    </script>
+</body>
+</html>

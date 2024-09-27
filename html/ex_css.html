@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+ 
+<head> 
+   <meta charset="UTF-8"> 
+   <link href = "../css/ex_css.css" type="text/css" rel="stylesheet" media="screen"/>
+   <title>Css selector</title> 
+
+</head>  
+  
+<!-- appliquer une police de caractères sans sérif à la page --> 
+<body>  
+  
+   <!-- positionner l'image et le menu côte à côte en mettant le header 
+en display:flex. --> 
+   <header class="topPage">  
+       <!-- ajouter une bordure à cette image --> 
+       <img src="img/vide.png" alt="" />  
+       <nav> 
+           <ul> 
+               <!-- mettre tous les li en display:inline-block et 
+list-style-type:none --> 
+               <!-- modifier text-decoration, le mettre à none sur toutes 
+les balises a --> 
+               <!-- et modifier la couleur des liens : color:#99F; -->  
+               <li><a href="#" title="Css selector 1">liens 1</a></li> 
+               <li><a href="#" title="Css selector 2">liens 2</a></li> 
+               <li><a href="#" title="Css selector 3">liens 3</a></li> 
+               <li><a href="#" title="Css selector 4">liens 4</a></li> 
+               <li><a href="#" title="Css selector 5">liens 5</a></li> 
+           </ul> 
+       </nav> 
+   </header>  
+  
+   <section> 
+       <header> 
+           <!-- au passage de la souris sur header, souligner le titre h1.--> 
+           <h1>Titre</h1> 
+           <h4>Chapeau</h4> 
+       </header>  
+       <!-- sélectionner chaque article et appliquer une couleur de fond, 
+ajouter du margin pour séparer la balise article des autres articles. --> 
+       <article>  
+           <!-- mettre un fond gris au header de tous les articles  
+et un padding. --> 
+           <header> 
+               <span>Ecrit le 14/12/2023</span> 
+           </header>  
+           <!-- mettre le texte de ce h3 en bleu --> 
+           <!-- mettre la première lettre de chaque h3 dans un article,  
+en majuscule --> 
+           <!-- modifier line-height: 0; de chaque h3, pour optimiser  
+l'espace. --> 
+           <!-- mettre un padding de 10px à tous les h3 d'un article -->  
+                <h3>sous-titre</h3>  
+           <!-- mettre un padding de 10px à tous les p d'un article -->  
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+Id nam explicabo adipisci, quidem vero debitis nisi, omnis sint repellendus 
+consequuntur dicta voluptate recusandae? Aliquid modi ratione et veniam eius 
+dicta.</p>  
+           <!-- mettre un fond gris au footer (comme le header) de tous  
+les articles et un padding. --> 
+           <footer> 
+               <span>Auteur : Bobbette</span> 
+           </footer> 
+       </article>  
+       <article> 
+           <header> 
+               <span>Ecrit le 18/12/2023</span> 
+           </header>  
+           <!-- mettre le texte de ce h3 en rouge → 
+           <!-- mettre la première lettre de chaque h3 dans un article  
+en majuscule --> 
+           <h3>sous-titre 2 </h3>  
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+Id nam explicabo adipisci, quidem vero debitis nisi, omnis sint repellendus 
+consequuntur dicta voluptate recusandae? Aliquid modi ratione et veniam eius 
+dicta.</p>  
+               <!-- mettre ce style :  
+                    display:inline-block;  
+                    width:50px;  
+                    height:50px;  
+                    margin:10px; 
+                    padding:10px; 
+                    à toutes les div dont la classe commence par box_ 
+avec une couleur d'arrière-plan au choix --> 
+ 
+                       <div class="box_1">1</div> 
+                        <div class="box_2">2</div> 
+                        <div class="box_3">3</div>  
+ 
+               <!-- idem pour toutes les div dont la classe commence 
+par megaBox_ mais avec des dimensions de 80px de côté. Et toujours une couleur 
+d'arrière-plan au choix. -->  
+               <div class="megaBox_1">1</div><div class="megaBox_2">2 
+</div><div class="megaBox_3">3</div>  
+           <footer> 
+               <span>Auteur : Bob Marcel</span> 
+           </footer> 
+       </article>  
+   </section>  
+   <footer>  
+       <!-- appliquer à cette balise nav le style text-align:center; --> 
+       <nav>  
+            <!-- appliquer à la balise ul le style padding:0 (pour éliminer 
+le padding qu'une balise ul a par défaut) --> 
+           <ul>  
+              <!-- mettre tous les li en display:inline-block et  
+list-style-type:none --> 
+              <!-- modifier text-decoration, le mettre à none sur toutes 
+les balises a --> 
+             <!-- et modifier la couleur des liens : color:#999; --> 
+              <li><a href="#" title="Css selector 6">liens 6</a></li> 
+             <li><a href="#" title="Css selector 7">liens 7</a></li> 
+              <li><a href="#" title="Css selector 8">liens 8</a></li> 
+           </ul> 
+       </nav> 
+   </footer>  
+</body> 
+</html> 

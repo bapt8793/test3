@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "../css/cadre.css" type="text/css" rel="stylesheet" media="screen"/>
+    <title>Cadre</title>
+    <script>
+        function pleinEcran() { 
+        var elem = document.getElementById('fullScreen1'); 
+    // Sortir du plein écran 
+    if (document.fullscreenElement) { 
+        document.cancelFullScreen(); 
+    } else if (document.webkitFullscreenElement) { 
+        document.webkitCancelFullScreen(); 
+    } else if (document.mozFullscreenElement) { 
+        document.mozCancelFullScreen(); 
+    } else  { 
+        // Passage en plein écran 
+        if (elem.requestFullScreen) { 
+            elem.requestFullScreen(); 
+        } else if (elem.webkitRequestFullScreen) { 
+            elem.webkitRequestFullScreen(); 
+        } else if (elem.mozRequestFullScreen) { 
+            elem.mozRequestFullScreen(); 
+        } else { 
+            alert('Navigateur incompatible avec plein écran.'); 
+        } 
+   } 
+} 
+</script>
+
+
+</head>
+
+<body>
+    <center>
+    <h1> Portail d'information </h1>
+    <div id="fullScreen1"> 
+    <input type="button" onclick="pleinEcran();" value="Plein écran" /> 
+    <h2>Une page qui passe en plein écran.</h2> 
+
+    <iframe width = "34%" height="1000" src="index.html">
+    </iframe>
+    
+    <iframe id="myIframe" src="" 
+            width= "65%" height="1000">
+    </iframe>
+             
+    </div> 
+
+    <script>
+        // Récupérer l'URL à partir des paramètres de l'URL
+            const params = new URLSearchParams(window.location.search);
+            const url = params.get('url');
+            if (url) {
+            document.getElementById('myIframe').src = url;
+                        }
+            
+            </script>
+    
+</body>
+</html>

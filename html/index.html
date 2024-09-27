@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Baptiste Bahu / Test BTS SIO-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "../css/list.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Mission 1</title>
+
+    <script type="text/javascript">
+        function sortie(txt) {
+            document.getElementById("sortie").innerHTML += txt + "<br />";
+        }
+        function dragNav(target, evt) {
+            evt.dataTransfer.setData("nomIco", target.id);
+            sortie("L'image <b>" + target.id + "</b> est en train d'être déplacée");
+        }
+        function dropNav(target, evt, compatible) {
+            let id = evt.dataTransfer.getData("nomIco");
+            target.appendChild(document.getElementById(id));
+    
+            if (compatible) {
+                sortie("L'image <b>" + id + "</b> a été déposée dans la zone compatible");
+            } else {
+                sortie("L'image <b>" + id + "</b> a été déposée dans la zone incompatible");
+            }
+    
+            evt.preventDefault();
+        }
+</script>
+
+    <script>
+      var db = window.indexedDB.open("BTS","1.0","description", 5 * 1024 * 1024); 
+      
+
+    </script>
+
+
+</head>
+<body>
+
+    <input type="checkbox" id="menuBurger">  
+    <label for="menuBurger">☰</label>  
+ 
+    <nav role="navigation" id="navMenu">  
+        <ul>  
+            <li><a href="div.html">Front-End</a></li>  
+            <li><a href="ex_css.html">Mobile</a></li>  
+            <li><a href="div.html">Back-end</a></li>  
+            <li><a href="ex_css.html">FullStack</a></li>  
+        
+        </ul>  
+    </nav>  
+
+    <center>
+
+<div class="contenu">
+<h1>Les métiers de développeurs</h1>
+<iframe width="600" height="200" src="https://www.youtube.com/embed/Pl0TA4PC2Oo?si=zCe-whZVuAUr2yiX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br>
+<br>
+
+<table border="1" width="100%" cellpadding="3">
+    <tr>
+        <th colspan="5" bgcolor="#1b5"><font color="blue" size="5" face="Calibri"><b> Les métiers </b></font></th>
+    </tr>
+    <tr>
+        <td>Front-End</td>
+        <td>Mobile</td>
+        <td>Back-end</td>
+        <td>FullStack</td>
+    </tr>
+    <tr>
+        <td> <a href="cadre.html?url=https://hal.science/hal-00161484" target="_top"> <img class= "bordureBleu clikc" src="../img/Front.png" alt="Front" width="100px" height="100px" > </a> </td>
+        <td> <a href="cadre.html?url=https://www.pierre-giraud.com/html-css-apprendre-coder-cours/iframe/" target="_top"><img src="../img/Mobile.png" alt="Mobile" width="100px" height="100px"> </a> </td>
+        <td><img src="../img/Back.png" alt="Back" width="100px" height="100px"></td>
+        <td><img src="../img/Full.png" alt="Full" width="100px" height="100px"></td>
+    </tr>
+</table>
+
+<ol>
+    <li>Quelle belle <span class = "plume pplume"></span> </span></li>
+    <li>Quelle belle <span class="plume pAccroche" ></span></li>
+    <li><a href="mailto:baptiste.bahu@univ-rennes.fr"> Envoyer un mail </a></li>
+</ol>
+
+<br>
+<ul>
+    <li>Un item de la liste</li>
+    <li>Un item de la liste</li>
+    <li>Un item de la liste</li>
+</ul>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2631.6522777574655!2d2.25002937731607!3d48.731235571315096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e677a226d26443%3A0x169ed3e42bc6b239!2sLyc%C3%A9e%20Parc%20de%20Vilgenis!5e0!3m2!1sfr!2sfr!4v1726208403283!5m2!1sfr!2sfr" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+ 
+<p>Glissez/Lâchez les navigateurs dans une zone<br /> 
+    <img src="../img/chrome1.png" 
+        id="chrome_ico"  
+        ondragstart="dragNav(this, event)"  
+        alt="Logo Chrome"> 
+    <img src="../img/firefox1.png" 
+        id="firefox_ico" 
+        ondragstart="dragNav(this, event)" 
+        alt="Logo Firefox"> 
+    <img src="../img/edge.png"  
+        id="edge_ico" 
+        ondragstart="dragNav(this, event)"  
+        alt="Logo Edge"> 
+    <img src="../img/opera1.png"  
+        id="opera_ico" 
+        ondragstart="dragNav(this, event)" 
+        alt="Logo Opera"> 
+    <img src="../img/safari1.png"  
+        id="safari_ico" 
+        ondragstart="dragNav(this, event)" 
+        alt="Logo Safari"></p> 
+ 
+<div class="box" ondragover="return false" ondrop="dropNav(this, event, 1)"> 
+    <p>Navigateurs compatibles</p> 
+</div> 
+<div class="box" ondragover="return false" ondrop="dropNav(this,  event, 0)"> 
+    <p>Navigateurs incompatibles</p> 
+</div> 
+    <div id="sortie"></div> 
+
+
+</center>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body { 
+    font-family:Arial, Helvetica, sans-serif; 
+} 
+header.topPage { 
+    display: flex; 
+} 
+header.topPage img { 
+    border:5px #000 solid; 
+} 
+
+header.topPage nav ul li, 
+footer nav ul li { 
+   display: inline-block; 
+   list-style-type: none; 
+} 
+header.topPage nav ul li a { 
+    text-decoration: none; 
+    color: #99f; 
+} 
+section article { 
+    background-color: #eee; 
+    margin: 10px; 
+} 
+
+/* La première balise article est le deuxième enfant de la section */ 
+section article:nth-child(2) h3 { 
+    color: #00f; 
+} 
+section article:nth-child(3) h3 { 
+    color: #f00; 
+} 
+section article h3 { 
+   padding: 10px; 
+    line-height: 0;  
+} 
+section article p { 
+   padding: 10px; 
+} 
+section article h3::first-letter { 
+    text-transform: uppercase; 
+} 
+section article header, 
+section article footer { 
+    background-color: #ccc; 
+    padding: 10px; 
+} 
+
+/* Lorsque la souris survole la balise header, alors la balise h1, 
+enfant du header, est soulignée. */ 
+section header:hover h1 { 
+    text-decoration: underline; 
+} 
+
+/* Sélectionne toutes les balises div dont la class commence par box_ */ 
+div[class^='box_'] { 
+    display:inline-block;  
+    width:50px;  
+    height:50px; 
+    background-color: #9f9; 
+    margin: 10px; 
+    padding: 10px; 
+} 
+div[class^='megaBox_'] { 
+    display:inline-block;  
+    width:80px;  
+    height:80px; 
+    background-color: #f99; 
+    margin: 10px; 
+    padding: 10px; 
+} 
+footer nav { 
+    text-align: center; 
+} 
+footer nav ul li a { 
+    text-decoration: none; 
+    color: #999; 
+} 
